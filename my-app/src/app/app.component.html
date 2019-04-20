@@ -1,0 +1,18 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+  <input type="text" [value]="title" />
+  <input type="text" [(ngModel)]="title" [value]="title" #inputvalue />
+  <button type="button" name="button" (click)="todoClick(inputvalue)">
+    Click Me
+  </button>
+  <button type="button" name="button" (click)="ascend()">Ascending</button>
+  <button type="button" name="button" (click)="dscend()">descending</button>
+  <ol>
+    <li *ngFor="let i of lValue">
+      {{ i }} <button type="button" (click)="deletedd(i)">Delete</button>
+    </li>
+  </ol>
+
+  <router-outlet></router-outlet>
+</div>
